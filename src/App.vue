@@ -1,32 +1,72 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+    <v-app-bar
+      app
+      color="primary"
+      dark
+    >
+      <v-img
+        class="mx-2"
+        :src="images.firebase"
+        max-height="40"
+        max-width="40"
+        contain
+      ></v-img>
+      +
+      <v-img
+        class="mx-2 ml-4"
+        :src="images.vue"
+        max-height="28"
+        max-width="28"
+        contain
+      ></v-img>
+
+      <v-toolbar-title class="ml-2"> Firebase Vue - Demo</v-toolbar-title>
+
+      <v-spacer></v-spacer>
+
+      <v-tooltip bottom>
+        <template v-slot:activator="{on}">
+          <v-btn
+            href="https://console.firebase.google.com/u/2/project/fir-vue-demo-27827/database/firestore/data~2Fusers~2FagGKMNIZn8QK5icJlZbq"
+            target="_blank"
+            text
+            v-on="on"
+          >
+            <span class="mr-2">See data in Firestore
+            </span>
+            <v-icon>mdi-open-in-new</v-icon>
+          </v-btn>
+        </template>
+        <span>Be sure you're logged in Firebase and already have access to the project</span>
+      </v-tooltip>
+    </v-app-bar>
+
+    <v-content>
+      <UserList/>
+    </v-content>
+  </v-app>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import UserList from './views/UserList';
 
-#nav {
-  padding: 30px;
+export default {
+  name: 'App',
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+  components: {
+    UserList,
+  },
 
-    &.router-link-exact-active {
-      color: #42b983;
+  data: () => ({
+    images: {
+      firebase: require('./assets/firebase-logo.png'),
+      vue: require('./assets/vue-logo.png')
     }
-  }
-}
+  }),
+};
+</script>
+
+<style scoped>
+
 </style>
