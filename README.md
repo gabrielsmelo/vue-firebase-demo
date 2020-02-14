@@ -1,5 +1,9 @@
 # firebase-vue-demo
 
+## Demo
+
+![Demo image](https://imgur.com/aQM7RSD "Application Demo image")
+
 ## Project setup
 ```
 npm install
