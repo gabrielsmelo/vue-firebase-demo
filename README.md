@@ -1,5 +1,7 @@
 # firebase-vue-demo
 
+A Vue application using Firebase Real Time Database, made in one hour and a half.
+
 ## Demo
 
 ![Demo image](https://i.imgur.com/aQM7RSD.png "Application Demo image")
