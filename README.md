@@ -1,6 +1,6 @@
 # firebase-vue-demo
 
-A Vue application using Firebase Real Time Database, made in one hour and a half.
+A simple Vue.js 2 application using Firebase Real Time Database, made in one hour and a half.
 
 ## Demo
 
