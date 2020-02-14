@@ -2,7 +2,7 @@
 
 ## Demo
 
-![Demo image](https://imgur.com/aQM7RSD "Application Demo image")
+![Demo image](https://i.imgur.com/aQM7RSD.png "Application Demo image")
 
 ## Project setup
 ```
